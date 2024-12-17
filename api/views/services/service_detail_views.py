@@ -12,7 +12,7 @@ class ServiceDetailViews(APIView):
         service = get_object(Service, service)
         serializer = ServiceSerializer(service)
 
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def put(self, request, service):
         service = get_object(Service, service)

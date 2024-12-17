@@ -9,7 +9,7 @@ class ServiceListViews(APIView):
         data = Service.objects.all()
         services = ServiceSerializer(data, many=True)
 
-        return Response(services.data)
+        return Response(services.data, status=status.HTTP_200_OK)
 
     def post(self, request):
         service = ServiceSerializer(data=request.data)

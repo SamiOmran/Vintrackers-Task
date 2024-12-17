@@ -8,4 +8,4 @@ class ServiceTopFiveView(APIView):
         top_5 = Service.objects.order_by('-cost').all()[:5]
         services = ServiceSerializer(top_5, many=True)
 
-        return Response(services.data)
+        return Response(services.data, status=status.HTTP_200_OK)

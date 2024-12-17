@@ -9,7 +9,7 @@ class LeadListViews(APIView):
         data = Lead.objects.all()
         leads = LeadSerializer(data, many=True)
 
-        return Response(leads.data)
+        return Response(leads.data, status=status.HTTP_200_OK)
 
     def post(self, request):
         lead = LeadSerializer(data=request.data)

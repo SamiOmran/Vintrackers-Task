@@ -11,7 +11,7 @@ class VehicleDetailViews(APIView):
         vehicle = get_object(Vehicle, vehicle)
         serializer = VehicleSerializer(vehicle)
 
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def put(self, request, vehicle):
         vehicle = get_object(Vehicle, vehicle)

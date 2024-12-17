@@ -12,7 +12,7 @@ class LeadDetailViews(APIView):
         lead = get_object(Lead, lead)
         serializer = LeadSerializer(lead)
 
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def put(self, request, lead):
         lead = get_object(Lead, lead)

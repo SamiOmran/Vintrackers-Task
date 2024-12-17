@@ -9,7 +9,7 @@ class VehicleListViews(APIView):
         data = Vehicle.objects.all()
         vehicles = VehicleSerializer(data, many=True)
 
-        return Response(vehicles.data)
+        return Response(vehicles.data, status=status.HTTP_200_OK)
 
     def post(self, request):
         vehicle = VehicleSerializer(data=request.data)
