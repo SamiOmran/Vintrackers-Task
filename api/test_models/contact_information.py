@@ -1,5 +1,5 @@
 from django.db import models
-from . import Lead
+from .lead import Lead
 
 
 class ContactInformation(models.Model):

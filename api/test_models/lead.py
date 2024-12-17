@@ -1,5 +1,5 @@
 from django.db import models
-from . import Vehicle
+from .vehicle import Vehicle
 
 
 class Lead(models.Model):

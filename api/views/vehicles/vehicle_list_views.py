@@ -1,0 +1,21 @@
+from api.models import Vehicle
+from api.serializers.vehicle_serializer import VehicleSerializer
+from api.views import APIView, Response, status
+
+
+class VehicleListViews(APIView):
+
+    def get(self, request):
+        data = Vehicle.objects.all()
+        vehicles = VehicleSerializer(data, many=True)
+
+        return Response(vehicles.data)
+
+    def post(self, request):
+        vehicle = VehicleSerializer(data=request.data)
+
+        if vehicle.is_valid():
+            vehicle.save()
+            return Response(vehicle.data, status=status.HTTP_201_CREATED)
+
+        return Response(vehicle.errors, status=status.HTTP_400_BAD_REQUEST)
