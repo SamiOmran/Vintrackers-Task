@@ -92,7 +92,8 @@ DATABASES = {
         'HOST': os.getenv('DATABASE_HOST'),
         'PORT': os.getenv('DATABASE_PORT'),
         'TEST': {
-            'NAME': os.getenv('DATABASE_TEST')
+            'ENGINE': 'django.db.backends.sqlite3',
+            # 'NAME': BASE_DIR / 'api.api_tests.db.sqlite3',
         },
     }
 }
