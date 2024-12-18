@@ -7,7 +7,7 @@ class Vehicle(models.Model):
     make = models.CharField(max_length=100)
     model = models.CharField(max_length=100)
     year = models.IntegerField()
-    lead = models.ForeignKey(Lead, on_delete=models.CASCADE)
+    lead = models.ForeignKey(Lead, related_name='vehicles', on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'vehicles'
