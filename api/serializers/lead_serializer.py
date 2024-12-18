@@ -1,9 +1,12 @@
 from rest_framework.serializers import ModelSerializer
 
 from api.all_models.lead import Lead
+from api.serializers.contact_information_serializer import LeadContactInfoSerializer
 
 
 class LeadSerializer(ModelSerializer):
+    contacts_information = LeadContactInfoSerializer(many=True)
+
     class Meta:
         model = Lead
         fields = '__all__'

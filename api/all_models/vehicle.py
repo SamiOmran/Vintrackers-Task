@@ -8,3 +8,6 @@ class Vehicle(models.Model):
     model = models.CharField(max_length=100)
     year = models.IntegerField()
     lead = models.ForeignKey(Lead, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'vehicles'
