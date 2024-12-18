@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from ..models import Vehicle
+from api.all_models.vehicle import Vehicle
 
 
 class VehicleSerializer(ModelSerializer):

@@ -1,5 +1,4 @@
 from django.db import models
-from .vehicle import Vehicle
 
 
 class Lead(models.Model):
@@ -7,4 +6,4 @@ class Lead(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
-    phone = models.CharField(30)
+    phone = models.CharField(max_length=30)

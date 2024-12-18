@@ -1,5 +1,5 @@
 from api.models import Service
-from api.serializers.service_serializer import ServiceSerializer
+from api.serializers.service_serializer import ListServiceSerializer, ServiceSerializer
 from api.views import APIView, Response, status
 
 
@@ -7,7 +7,7 @@ class ServiceListViews(APIView):
 
     def get(self, request):
         data = Service.objects.all()
-        services = ServiceSerializer(data, many=True)
+        services = ListServiceSerializer(data, many=True)
 
         return Response(services.data, status=status.HTTP_200_OK)
 

@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from ..models import Mechanic
+from api.all_models.mechanic import Mechanic
 
 
 class MechanicSerializer(ModelSerializer):

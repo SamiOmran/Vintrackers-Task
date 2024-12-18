@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from ..models import Lead
+from api.all_models.lead import Lead
 
 
 class LeadSerializer(ModelSerializer):

@@ -1,7 +1,11 @@
 from django.urls import path
 
+from api.views.contacts_information.contact_information_detail_views import ContactInformationDetailViews
+from api.views.contacts_information.contact_information_list_views import ContactInformationListViews
 from api.views.leads.lead_list_views import LeadListViews
 from api.views.leads.lead_detail_views import LeadDetailViews
+from api.views.mechanics.mechanic_detail_views import MechanicDetailViews
+from api.views.mechanics.mechanic_list_views import MechanicListViews
 from api.views.services.service_detail_views import ServiceDetailViews
 from api.views.services.service_list_views import ServiceListViews
 from api.views.services.service_top_five_view import ServiceTopFiveView
@@ -19,5 +23,11 @@ urlpatterns = [
 
     path('services/', ServiceListViews.as_view()),
     path('services/<int:service>', ServiceDetailViews.as_view()),
-    path('services/top-services', ServiceTopFiveView.as_view())
+    path('services/top-services', ServiceTopFiveView.as_view()),
+
+    path('mechanics/', MechanicListViews.as_view()),
+    path('mechanics/<int:mechanic>', MechanicDetailViews.as_view()),
+
+    path('contacts-information/', ContactInformationListViews.as_view()),
+    path('contacts-information/<int:contact_info>', ContactInformationDetailViews.as_view()),
 ]
