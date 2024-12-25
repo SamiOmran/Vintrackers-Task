@@ -15,3 +15,5 @@ api/views/leads/__pycache__
 api/views/mechanics/__pycache__
 api/views/services/__pycache__
 api/views/vehicles/__pycache__
+api/**/__pycache__
+vehicle_service/__pycache__
