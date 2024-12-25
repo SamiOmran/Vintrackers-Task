@@ -1,5 +1,5 @@
 from api.models import Lead
-from api.serializers.lead_serializer import LeadSerializer
+from api.serializers.lead_serializer import LeadSerializer, ListLeadSerializer
 from api.views import APIView, Response, status
 
 
@@ -7,7 +7,7 @@ class LeadListViews(APIView):
 
     def get(self, request):
         data = Lead.objects.all()
-        leads = LeadSerializer(data, many=True)
+        leads = ListLeadSerializer(data, many=True)
 
         return Response(leads.data, status=status.HTTP_200_OK)
 

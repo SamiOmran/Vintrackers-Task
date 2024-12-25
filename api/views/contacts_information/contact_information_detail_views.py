@@ -28,4 +28,4 @@ class ContactInformationDetailViews(APIView):
         contact_info = get_object(ContactInformation, contact_info)
         contact_info.delete()
 
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg': 'model deleted'}, status=status.HTTP_200_OK)

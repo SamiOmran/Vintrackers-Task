@@ -9,6 +9,12 @@ class VehicleSerializer(ModelSerializer):
         fields = '__all__'
 
 
+class ListVehicleSerializer(ModelSerializer):
+    class Meta:
+        model = Vehicle
+        fields = ['id', 'model', 'vin']
+
+
 class VehicleServiceSerializer(ModelSerializer):
     class Meta:
         model = Vehicle

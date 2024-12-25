@@ -4,6 +4,14 @@
 
 .env
 
-api/**/__pycache__/
-api/migrations/__pycache__/
-api/views/**/__pycache__/
+
+api/__pycache__
+api/all_models/__pycache__
+api/migrations/__pycache__
+api/serializers/__pycache__
+api/views/__pycache__
+api/views/contacts_information/__pycache__
+api/views/leads/__pycache__
+api/views/mechanics/__pycache__
+api/views/services/__pycache__
+api/views/vehicles/__pycache__

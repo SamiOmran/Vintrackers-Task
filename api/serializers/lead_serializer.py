@@ -5,8 +5,14 @@ from api.serializers.contact_information_serializer import LeadContactInfoSerial
 
 
 class LeadSerializer(ModelSerializer):
-    contacts_information = LeadContactInfoSerializer(many=True)
+    contacts_information = LeadContactInfoSerializer(many=True, required=False)
 
     class Meta:
         model = Lead
         fields = '__all__'
+
+
+class ListLeadSerializer(ModelSerializer):
+    class Meta:
+        model = Lead
+        fields = ['first_name', 'last_name']

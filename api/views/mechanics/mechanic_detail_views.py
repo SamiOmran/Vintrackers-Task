@@ -28,4 +28,4 @@ class MechanicDetailViews(APIView):
         mechanic = get_object(Mechanic, mechanic)
         mechanic.delete()
 
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response({'msg': 'model deleted'}, status=status.HTTP_200_OK)

@@ -1,16 +1,11 @@
-from django.db.models import Sum
+from django.db.models import Count
 
-from api.all_models.service import Service
+from api.all_models.lead import Lead
 from api.views import APIView, Response, status
 
 
 class LeadCreatedDayView(APIView):
     def get(self, request):
-        date = request.GET.get('date')
-        print(date)
-        if date:
-            services = Service.objects.filter(date=date).aggregate(total_cost=Sum('cost'))
-        else:
-            services = Service.objects.aggregate(total_cost=Sum('cost'))
+        services = Lead.objects.extra({'created_day': 'date(created_at)'}).values('created_day').annotate(count=Count('created_at'))
 
         return Response(services, status=status.HTTP_200_OK)

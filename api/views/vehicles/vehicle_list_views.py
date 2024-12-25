@@ -1,5 +1,5 @@
 from api.models import Vehicle
-from api.serializers.vehicle_serializer import VehicleSerializer
+from api.serializers.vehicle_serializer import ListVehicleSerializer, VehicleSerializer
 from api.views import APIView, Response, status
 
 
@@ -7,7 +7,7 @@ class VehicleListViews(APIView):
 
     def get(self, request):
         data = Vehicle.objects.all()
-        vehicles = VehicleSerializer(data, many=True)
+        vehicles = ListVehicleSerializer(data, many=True)
 
         return Response(vehicles.data, status=status.HTTP_200_OK)
 

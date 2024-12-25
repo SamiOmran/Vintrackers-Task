@@ -6,10 +6,10 @@ from api.all_models.contact_information import ContactInformation
 class ContactInformationSerializer(ModelSerializer):
     class Meta:
         model = ContactInformation
-        fields = '__all__'
+        exclude = ['deleted']
 
 
 class LeadContactInfoSerializer(ModelSerializer):
     class Meta:
         model = ContactInformation
-        exclude = ['lead_id']
+        exclude = ['lead_id', 'deleted']

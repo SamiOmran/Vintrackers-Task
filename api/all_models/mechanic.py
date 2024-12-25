@@ -1,12 +1,12 @@
 from django.db import models
 
 
-SPECIALIZATIONS = {
-    'ER': 'Engine repair',
-    'B': 'Brakes',
-    'SS': 'Steering and suspension',
-    'EP': 'Engine performance',
-}
+SPECIALIZATIONS = (
+    ('ER', 'Engine repair'),
+    ('B', 'Brakes'),
+    ('SS', 'Steering and suspension'),
+    ('EP', 'Engine performance'),
+)
 
 
 class Mechanic(models.Model):

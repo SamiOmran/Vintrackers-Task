@@ -4,7 +4,7 @@ from api.all_models.service import Service
 from api.views import APIView, Response, status
 
 
-class TotalCostServicesView(APIView):
+class TotalServicesCostView(APIView):
     def get(self, request):
         date = request.GET.get('date')
         if date:

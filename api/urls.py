@@ -3,7 +3,7 @@ from django.urls import path
 from api.views.contacts_information.contact_information_detail_views import ContactInformationDetailViews
 from api.views.contacts_information.contact_information_list_views import ContactInformationListViews
 from api.views.dashboard.lead_created_day_view import LeadCreatedDayView
-from api.views.dashboard.total_cost_services_view import TotalCostServicesView
+from api.views.dashboard.total_services_cost_view import TotalServicesCostView
 from api.views.dashboard.vehicle_cost_per_lead_view import VehicleCostPerLeadView
 from api.views.leads.lead_list_views import LeadListViews
 from api.views.leads.lead_detail_views import LeadDetailViews
@@ -44,7 +44,7 @@ urlpatterns = [
     path('contacts-information/<int:contact_info>', ContactInformationDetailViews.as_view()),
 
     # dashboard
-    path('dashboard/total-services-cost', TotalCostServicesView.as_view()),
+    path('dashboard/total-services-cost', TotalServicesCostView.as_view()),
     path('dashboard/leads-created-per-day', LeadCreatedDayView.as_view()),
-    path('dashboard/vehicles-cost-lead/<int:lead>', VehicleCostPerLeadView.as_view())
+    path('dashboard/vehicles-cost-lead/<int:lead>', VehicleCostPerLeadView.as_view()),
 ]
