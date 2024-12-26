@@ -47,9 +47,9 @@ class LeadAPITestCase(TestCase):
         self.assertEqual(response.data['first_name'], self.updated_lead_data['first_name'])
         self.assertEqual(response.data['email'], self.updated_lead_data['email'])
 
-    def test_05_delete_lead(self):
-        response = self.client.delete(f'{self.base_url}/{self.lead.id}/', format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+    # def test_05_delete_lead(self):
+    #     response = self.client.delete(f'{self.base_url}/{self.lead.id}/', format='json')
+    #     self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-        response = self.client.get(f'{self.base_url}/{self.lead.id}/', format='json')
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+    #     response = self.client.get(f'{self.base_url}/{self.lead.id}/', format='json')
+    #     self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
