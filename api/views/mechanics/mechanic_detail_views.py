@@ -1,4 +1,4 @@
-from api.models import Mechanic
+from api.models.mechanic import Mechanic
 from api.serializers.mechanic_serializer import MechanicSerializer
 from api.views import get_object, APIView, Response, status
 

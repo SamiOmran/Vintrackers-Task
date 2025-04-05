@@ -1,6 +1,6 @@
 from django.db.models import Count
 
-from api.all_models.lead import Lead
+from api.models.lead import Lead
 from api.views import APIView, Response, status
 
 

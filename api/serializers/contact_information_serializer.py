@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from api.all_models.contact_information import ContactInformation
+from api.models.contact_information import ContactInformation
 
 
 class ContactInformationSerializer(ModelSerializer):

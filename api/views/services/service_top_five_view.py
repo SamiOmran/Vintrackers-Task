@@ -1,6 +1,6 @@
 from api.views import APIView, Response, status
 from api.serializers.service_serializer import ServiceSerializer
-from api.models import Service
+from api.models.service import Service
 
 
 class ServiceTopFiveView(APIView):

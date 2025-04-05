@@ -1,6 +1,6 @@
 from django.db.models import Count
 
-from api.models import Mechanic
+from api.models.mechanic import Mechanic
 from api.views import APIView, Response, status
 
 

@@ -1,5 +1,6 @@
-from api.models import Service
-from api.serializers.service_serializer import ListServiceSerializer, ServiceSerializer
+from api.models.service import Service
+from api.serializers.service_serializer import ServiceSerializer
+from api.serializers.services_list_serializer import ListServiceSerializer
 from api.views import APIView, Response, status
 
 

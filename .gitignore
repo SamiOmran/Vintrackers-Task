@@ -6,7 +6,7 @@
 
 
 api/__pycache__
-api/all_models/__pycache__
+api/models/__pycache__
 api/migrations/__pycache__
 api/serializers/__pycache__
 api/views/__pycache__

@@ -1,4 +1,4 @@
-from api.models import Vehicle
+from api.models.vehicle import Vehicle
 from api.serializers.vehicle_serializer import VehicleSerializer
 from api.views import get_object, APIView, Response, status
 

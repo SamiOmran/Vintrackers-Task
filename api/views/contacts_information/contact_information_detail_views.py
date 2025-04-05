@@ -1,4 +1,4 @@
-from api.models import ContactInformation
+from api.models.contact_information import ContactInformation
 from api.serializers.contact_information_serializer import ContactInformationSerializer
 from api.views import get_object, APIView, Response, status
 

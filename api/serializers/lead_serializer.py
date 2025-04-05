@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 
-from api.all_models.lead import Lead
+from api.models.lead import Lead
 from api.serializers.contact_information_serializer import LeadContactInfoSerializer
 
 
@@ -15,4 +15,4 @@ class LeadSerializer(ModelSerializer):
 class ListLeadSerializer(ModelSerializer):
     class Meta:
         model = Lead
-        fields = ['first_name', 'last_name']
+        fields = ['id', 'first_name', 'last_name']

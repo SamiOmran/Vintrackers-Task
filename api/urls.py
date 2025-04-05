@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from api.views.contacts_information.contact_information_detail_views import ContactInformationDetailViews
 from api.views.contacts_information.contact_information_list_views import ContactInformationListViews
@@ -7,6 +7,7 @@ from api.views.dashboard.total_services_cost_view import TotalServicesCostView
 from api.views.dashboard.vehicle_cost_per_lead_view import VehicleCostPerLeadView
 from api.views.leads.lead_list_views import LeadListViews
 from api.views.leads.lead_detail_views import LeadDetailViews
+from api.views.leads.lead_vehicles_views import LeadVehiclesView
 from api.views.mechanics.count_mechanics_view import CountMechanicsView
 from api.views.mechanics.list_vehicles_mechanic_view import ListVehiclesMechanicView
 from api.views.mechanics.mechanic_detail_views import MechanicDetailViews
@@ -22,7 +23,8 @@ urlpatterns = [
     # leads
     path('leads', LeadListViews.as_view()),
     path('leads/<int:lead>', LeadDetailViews.as_view()),
-
+    path('leads/<int:lead>/vehicles', LeadVehiclesView.as_view()),
+    # re_path(),
     # vehicles
     path('vehicles', VehicleListViews.as_view()),
     path('vehicles/<int:vehicle>', VehicleDetailViews.as_view()),

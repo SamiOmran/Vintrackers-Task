@@ -1,4 +1,4 @@
-from api.models import Lead
+from api.models.lead import Lead
 from api.serializers.lead_serializer import LeadSerializer
 from api.views import get_object, APIView, Response, status
 

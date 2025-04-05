@@ -1,6 +1,6 @@
 from django.db.models import Sum
 
-from api.models import Service
+from api.models.service import Service
 from api.views import APIView, Response, status
 
 

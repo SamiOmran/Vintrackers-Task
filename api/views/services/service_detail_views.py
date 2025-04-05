@@ -1,4 +1,4 @@
-from api.models import Service
+from api.models.service import Service
 from api.serializers.service_serializer import ServiceSerializer
 from api.views import get_object, APIView, Response, status
 

@@ -1,8 +1,8 @@
 from django.db.models import Sum
 
-from api.all_models.lead import Lead
-from api.all_models.service import Service
-from api.all_models.vehicle import Vehicle
+from api.models.lead import Lead
+from api.models.service import Service
+from api.models.vehicle import Vehicle
 from api.views import APIView, Response, get_object, status
 
 
